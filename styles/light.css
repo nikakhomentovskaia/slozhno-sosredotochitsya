@@ -1,0 +1,51 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --bg-color: #FFF1F7;
+  --article-color: #353430;
+  --article-title-color: #353430;
+  --accent-color: #FF8DCB;
+  --navigation-color: #353430;
+  --navigation-color-hover: 1px solid rgba(50, 49, 45, 0.4);
+  --block-title: #353430;
+  --decorated-zone-color: #353430;
+  --title-decor-color: #353430; 
+  --color-h1: #FFc2e6;
+  --shadow-h1: #FF0070; 
+  --bg-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .rec {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFF1F7;
+    --article-color: #353430;
+    --article-title-color: #353430;
+    --accent-color: #FF8DCB;
+    --navigation-color: #353430;
+    --navigation-color-hover: 1px solid rgba(50, 49, 45, 0.4);
+    --block-title: #353430;
+    --decorated-zone-color: #353430;
+    --title-decor-color: #353430; 
+    --color-h1: #FFc2e6;
+    --shadow-h1: #FF0070;
+  }
+  .page {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+}
+  .rec {
+    display: none;
+  }
+}

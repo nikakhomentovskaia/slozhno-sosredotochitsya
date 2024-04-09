@@ -1,0 +1,441 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--font-family);
+  color: var(--article-color);
+  padding: 0px 10px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr max-content 1fr;
+  align-items: center;
+  min-block-size: var(--min-block-size);
+  max-block-size: var(--max-block-size);
+  position: relative;
+}
+
+.rec {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-color);
+  top: 12px;
+  right: 8px;
+  letter-spacing: 1px;
+}
+
+.rec::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  inline-size: 10px;
+  block-size: 10px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  border-right: solid 1px var(--decorated-zone-color);
+  border-top: solid 1px var(--decorated-zone-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  bottom: 11px;
+  left: 1px;
+  border-left: solid 1px var(--decorated-zone-color);
+  border-bottom: solid 1px var(--decorated-zone-color);
+  block-size: 25px;
+  inline-size: 25px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-block-start: 5px;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  border: none;
+  color: var(--navigation-color);
+  text-transform: lowercase;
+  font-size: var(--font-size);
+  outline: 1px solid transparent;
+  background-color: transparent;
+  padding: 3px 13px;
+  line-height: 1;
+  cursor: pointer;
+  appearance: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--navigation-color-hover);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--navigation-color);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--navigation-color);
+  pointer-events: none;
+}
+
+.title {
+  justify-self: start;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--color-h1);
+  text-shadow: 4px 4px 0 var(--shadow-h1);
+  line-height: 0.825;
+}
+
+.paragraph {
+  padding-block-end: 10px;
+}
+
+.paragraph-discription {
+  justify-self: end;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--title-font-weight);
+  line-height: 1.32;
+}
+
+.title-decor {
+  background-color: var(--accent-color);  
+  color: var(--title-decor-color);
+}
+
+@media (width >= 768px) {
+
+  .page {
+    padding: 0px;
+  }
+
+  .header {
+    min-block-size: var(--min-block-size);
+    max-block-size: var(--max-block-size);
+    padding-inline-end: 20px;
+  }
+
+  .header__theme-menu-list {
+    padding-block-start: 18px;
+  }
+
+  .rec {
+    top: 22px;
+    right: 28px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .paragraph {
+    justify-self: right;
+    margin-block-end: 10px;
+    max-inline-size: 364px;
+  }
+}
+
+@media (width >= 1024px) {
+  .page {
+    padding: 0px;
+  }
+
+  .header {
+    min-block-size: var(--min-block-size);
+    max-block-size: var(--max-block-size);
+  }
+
+  .header__theme-menu {
+    align-self: baseline;
+  }
+
+  .header__theme-menu-list {
+    padding-block-start: 20px;
+    padding-inline-start: 21px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .paragraph {
+    max-inline-size: 491px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 50px;
+  padding: 40px 0px;
+}
+
+.module__title {
+  padding-block-start: 1px;
+  color: var(--article-title-color);
+  font-size: var(--font-size);
+}
+
+.module__blocks-article {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 20px;
+  gap: 10px;
+}
+
+.module__blocks-article__title {
+  font-size: var(--font-size);
+  font-weight: bold;
+}
+
+.module__blocks-article__discription {
+  color: var(--article-color);
+  font-size: var(--font-size);
+  line-height: 1.3;
+}
+
+.module__blocks-article__link {
+  border: solid 0px transparent;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.module__blocks-article__link:hover {
+  border-bottom: solid 1px currentColor;
+}
+
+.module__blocks-article__link:focus {
+  outline: none;
+}
+
+.module__blocks-article__link:focus-visible {
+  outline: solid 1px var(--article-color);
+}
+
+.module__blocks-last {
+  padding-block-start: 21px;
+}
+
+.module__blocks-article__list {
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 20px;
+  gap: 20px;
+}
+
+.module__blocks-article__item-subtitle {
+  font-weight: normal;
+}
+
+.module__blocks-article__item-subtitle__discription {
+  padding-block-start: 11px;
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+.gallery__title {
+  font-size: var(--font-size);
+  font-weight: bold;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 10px;
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+  .main {
+    gap: 78px;
+    padding: 60px 20px;
+  }
+
+  .module {
+    display: grid;
+    grid-template-columns: 235px 1fr;
+    gap: 20px;
+  }
+
+  .module__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .module__blocks-article {
+    padding-block-start: 0px;
+  }
+
+  .horizont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .horizont .module__title {
+    max-width: min-content;
+  }
+
+  .module__blocks-last {
+    padding: 0px;
+    line-height: 1.27;
+  }
+
+  .images {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
+    padding-block-start: 20px;
+    gap: 20px;
+  }
+
+  .image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .image:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+    height: 192px;
+  }
+
+  .image:nth-child(2) {
+    grid-area: 1 / 3 / 3 / 4;
+    height: 441px;
+  }
+
+  .image:nth-child(3) {
+    grid-area: 2 / 1 / 4 / 2;
+    height: 568px;
+  }
+
+  .image:nth-child(4) {
+    grid-area: 2 / 2 / 3 / 3;
+    height: 230px;
+  }
+
+  .image:nth-child(5) {
+    grid-area: 3 / 2 / 4 / 4;
+    height: 318px;
+  }
+}
+
+@media (width >= 1024px) {
+  .module {
+    display: grid;
+    grid-template-columns: 315px 650px;
+    padding-top: 1px;
+  }
+
+  .module__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .horizont { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .module__title {
+    min-width: 315px;
+    line-height: 1.33;
+  }
+
+  .horizont .module__blocks {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .horizont .module__blocks-article__title {
+    width: 315px;
+  }
+
+  .module__blocks-last {
+    padding: 0px;
+  }
+
+  .image:nth-child(1) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image:nth-child(2) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image:nth-child(3) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image:nth-child(4) {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image:nth-child(5) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  min-block-size: var(--min-block-size);
+  max-block-size: var(--max-block-size);
+  justify-content: center;
+  align-content: center;
+}
+
+.footer_title {
+  align-self: center;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--color-h1);
+  text-shadow: 2px 2px 0 var(--shadow-h1);
+}
+
+@media (width >= 768px) {
+  .footer_title {
+    margin: 0px;
+    text-shadow: 2px 2px 0px var(--shadow-h1);
+  }
+}
