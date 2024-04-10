@@ -14,12 +14,12 @@
   --article-title-color: #FF0070;
   --accent-color: #FF0070;
   --navigation-color: #FF0070;
-  --navigation-color-hover: 1px solid rgba(255, 0, 112, 0.4);
+  --navigation-color-hover: rgba(255, 0, 112, 0.4);
   --block-title: #FF0070;
   --decorated-zone-color: #FF0070;
   --title-decor-color: #000028; 
-  --color-h1: #DB00FF;
-  --shadow-h1: #FF0070; 
+  --color-title: #DB00FF;
+  --shadow-title: #FF0070; 
   --bg-image: url(../images/cover-image-dark.png);
 }
 
