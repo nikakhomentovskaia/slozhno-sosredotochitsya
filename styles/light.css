@@ -21,8 +21,6 @@
   --color-title: #FFc2e6;
   --shadow-title: #FF0070; 
   --bg-image: url(../images/cover-image-light.png);
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
 }
 
 .page.theme_light .rec {
@@ -43,8 +41,6 @@
     --color-title: #FFc2e6;
     --shadow-title: #FF0070;
     --bg-image: url(../images/cover-image-light.png);
-    background-color: var(--bg-color);
-    background-image: var(--bg-image);
   }
 
   .rec {

@@ -356,17 +356,16 @@
   }
 
   .module__title {
-    min-width: 315px;
+    max-width: 315px;
     line-height: 1.33;
   }
 
   .horizont .module__blocks {
-    display: flex;
     flex-direction: row;
   }
 
   .horizont .module__blocks-article__title {
-    width: 315px;
+    max-width: 315px;
   }
 
   .image:nth-child(1) {
